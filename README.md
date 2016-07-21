@@ -1,10 +1,10 @@
 # myo-osc-relay
 
-Relays data from Thalmic Labs Myo armband to Supercollider (or any other program) via OSC. 
+A simple bluetooth, rechargeable, 10DOF head-tracking device.
 
-Compiles on OS X with Xcode. 
+For use with the [http://www.ambisonictoolkit.net/wiki/tiki-index.php Ambisonic ToolKit (ATK)], motion capture, and [[Pan-Tilt]] camera systems. 
 
-Versions and dependencies are described below. 
+A hardware, software, and 3d printed enclosure solution.
 
 Developed for UW Center for Digital Arts and Experimental Media (DXARTS), July 2016
 
@@ -12,42 +12,58 @@ Robert Twomey - roberttwomey.com
 
 # Usage
 
-after building, the executable can be found in:
-```
-myo-osc-relay/DerivedData/myo-osc-relay/Build/Products/Debug
-```
-
-Parameters are set by command line options: 
-```
- -v, verbose text output
- -a ADDR, OSC destination address
- -p PORT, OSC destination port
- -emg, send EMG data
- -pose, send pose data
- -quat, send orientation quaternion
- -accel, send acceleration
- -gyro, send gyroscope
- -linaccel, send linear acceleration
-```
-
- example: 
-
 ```./myo-osc-relay -v -emg -pose -quat -accel -gyro -linaccel```
 
-# Versions
+# Hardware
+Built with simple, ready to order parts from common suppliers. Purchase 1 each of the following:
+*Bluefruit EZ-Link - bluetooth modem w/ baud rate detection - http://www.adafruit.com/product/1588
+*Arduino Pro Mini 3.3V - https://www.sparkfun.com/products/11114
+*Power switch - https://www.sparkfun.com/products/102
+*GY-86 - 10 DOF flight control module with MPU6050 + HMC5883L + MS5611 - http://www.amazon.com/Arrela-Control-Ms5611-Hmc5883l-Mpu6050/dp/B00KKJYMO6/
+*LiPo Battery - https://www.sparkfun.com/products/731
+*LiPo Charger - https://www.sparkfun.com/products/10217 (note you need to cut off the JST connector to fit it in the enclosure)
+*Small quantity of stranded ribbon cable.
 
-## OS X / Xcode
-xcode Version 7.3 (7D175)
+One of the following, needed to program the arduino. (One use only! Borrow from a friend?)
+*FTDI Basic 3.3V - https://www.sparkfun.com/products/9873
+*FTDI Cable 3.3V - http://www.adafruit.com/product/70
 
-os x 10.11.5
+You can also choose to leave the LiPo charger out of the enclosure for small space savings.
 
-## Myo
+# Arduino
 
-myo connect Version 1.0.1 https://s3.amazonaws.com/thalmicdownloads/mac/1.0.1/MyoConnect.dmg
+We are using the straight FreeIMU_quaternion example from FreeIMU v0.4. This reads the attached sensors, calculates the AHRS quaternion, and transmits via serial print.
 
-myo firmware is 1.5.1970
+I've attached a copy of the FreeIMU_quaternion code here with the baud rate set to 38400, the max rate for the Arduino Pro Mini. 
 
-## oscpack
+arduino/FreeIMU_quaternion/FreeIMU_quaternion.ino
 
-oscpack http://www.rossbencina.com/code/oscpack
+# Processing
 
+This is the demo app in Processing included with FreeIMU v0.4.
+#With the headtraker powered on, pair your computer with the bluefruit device.
+#Change the serial port screen to match your bluefruit device, for example ''/dev/tty.AdafruitEZ-Link3e2f-SPP'' on my system.
+#Run the example. Press 'h' to store the home position.
+
+processing/FreeIMU_cube/FreeIMU_cube.pde
+
+# Python
+Simple python program to read from the IMU headtracker and record to file. Additionally opens second serial device and feeds values to pan-tilt camera in matching orientation. 
+
+python/head_through.py
+
+# Supercollider
+
+supercollider/ArduinoQuaternion/ArduinoQuaternion.sc
+
+A class based on the Arduino quark that connects to the paired bluetooth device as a serial port, and parses the binary data.
+
+supercollider/bt_headtrack_test.scd
+
+A sandbox program to try out the headtrack class.
+
+# Solidworks
+
+solidworks/realv4/
+
+Solid model of enclosures and circuitry.
