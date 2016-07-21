@@ -32,11 +32,12 @@ You can also choose to leave the LiPo charger out of the enclosure for small spa
 
 # Arduino
 
+(arduino/FreeIMU_quaternion/FreeIMU_quaternion.ino)
+
 We are using the straight FreeIMU_quaternion example from FreeIMU v0.4. This reads the attached sensors, calculates the AHRS quaternion, and transmits via serial print.
 
 I've attached a copy of the FreeIMU_quaternion code here with the baud rate set to 38400, the max rate for the Arduino Pro Mini. 
 
-arduino/FreeIMU_quaternion/FreeIMU_quaternion.ino
 
 # Processing
 
