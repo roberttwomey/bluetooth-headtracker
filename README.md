@@ -15,6 +15,7 @@ Robert Twomey - roberttwomey.com
 See the software options below. 
 
 # Hardware
+
 Built with simple, ready to order parts from common suppliers. Purchase 1 each of the following:
 * Bluefruit EZ-Link - bluetooth modem w/ baud rate detection - http://www.adafruit.com/product/1588
 * Arduino Pro Mini 3.3V - https://www.sparkfun.com/products/11114
@@ -41,31 +42,34 @@ I've attached a copy of the FreeIMU_quaternion code here with the baud rate set 
 
 # Processing
 
+[processing/FreeIMU_cube](processing/FreeIMU_cube)
+
 This is the demo app in Processing included with FreeIMU v0.4.
 
 1. With the headtraker powered on, pair your computer with the bluefruit device.
 2. Change the serial port screen to match your bluefruit device, for example ''/dev/tty.AdafruitEZ-Link3e2f-SPP'' on my system.
 3. Run the example. Press 'h' to store the home position.
 
-processing/FreeIMU_cube/FreeIMU_cube.pde
+
 
 # Python
+[python/head_through.py](python/head_through.py)
+
 Simple python program to read from the IMU headtracker and record to file. Additionally opens second serial device and feeds values to pan-tilt camera in matching orientation. 
 
-python/head_through.py
 
 # Supercollider
 
-supercollider/ArduinoQuaternion/ArduinoQuaternion.sc
+[supercollider/ArduinoQuaternion/ArduinoQuaternion.sc](supercollider/ArduinoQuaternion/ArduinoQuaternion.sc)
 
 A class based on the Arduino quark that connects to the paired bluetooth device as a serial port, and parses the binary data.
 
-supercollider/bt_headtrack_test.scd
+[supercollider/bt_headtrack_test.scd](supercollider/bt_headtrack_test.scd)
 
 A sandbox program to try out the headtrack class.
 
 # Solidworks
 
-solidworks/realv4/
+[solidworks/realv4/](solidworks/realv4/)
 
 Solid model of enclosures and circuitry.
