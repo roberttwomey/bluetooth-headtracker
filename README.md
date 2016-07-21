@@ -12,7 +12,7 @@ Robert Twomey - roberttwomey.com
 
 # Usage
 
-```./myo-osc-relay -v -emg -pose -quat -accel -gyro -linaccel```
+See the software options below. 
 
 # Hardware
 Built with simple, ready to order parts from common suppliers. Purchase 1 each of the following:
