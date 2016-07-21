@@ -16,17 +16,17 @@ Robert Twomey - roberttwomey.com
 
 # Hardware
 Built with simple, ready to order parts from common suppliers. Purchase 1 each of the following:
-*Bluefruit EZ-Link - bluetooth modem w/ baud rate detection - http://www.adafruit.com/product/1588
-*Arduino Pro Mini 3.3V - https://www.sparkfun.com/products/11114
-*Power switch - https://www.sparkfun.com/products/102
-*GY-86 - 10 DOF flight control module with MPU6050 + HMC5883L + MS5611 - http://www.amazon.com/Arrela-Control-Ms5611-Hmc5883l-Mpu6050/dp/B00KKJYMO6/
-*LiPo Battery - https://www.sparkfun.com/products/731
-*LiPo Charger - https://www.sparkfun.com/products/10217 (note you need to cut off the JST connector to fit it in the enclosure)
-*Small quantity of stranded ribbon cable.
+* Bluefruit EZ-Link - bluetooth modem w/ baud rate detection - http://www.adafruit.com/product/1588
+* Arduino Pro Mini 3.3V - https://www.sparkfun.com/products/11114
+* Power switch - https://www.sparkfun.com/products/102
+* GY-86 - 10 DOF flight control module with MPU6050 + HMC5883L + MS5611 - http://www.amazon.com/Arrela-Control-Ms5611-Hmc5883l-Mpu6050/dp/B00KKJYMO6/
+* LiPo Battery - https://www.sparkfun.com/products/731
+* LiPo Charger - https://www.sparkfun.com/products/10217 (note you need to cut off the JST connector to fit it in the enclosure)
+* Small quantity of stranded ribbon cable.
 
 One of the following, needed to program the arduino. (One use only! Borrow from a friend?)
-*FTDI Basic 3.3V - https://www.sparkfun.com/products/9873
-*FTDI Cable 3.3V - http://www.adafruit.com/product/70
+* FTDI Basic 3.3V - https://www.sparkfun.com/products/9873
+* FTDI Cable 3.3V - http://www.adafruit.com/product/70
 
 You can also choose to leave the LiPo charger out of the enclosure for small space savings.
 
@@ -41,9 +41,9 @@ arduino/FreeIMU_quaternion/FreeIMU_quaternion.ino
 # Processing
 
 This is the demo app in Processing included with FreeIMU v0.4.
-#With the headtraker powered on, pair your computer with the bluefruit device.
-#Change the serial port screen to match your bluefruit device, for example ''/dev/tty.AdafruitEZ-Link3e2f-SPP'' on my system.
-#Run the example. Press 'h' to store the home position.
+1. With the headtraker powered on, pair your computer with the bluefruit device.
+2. Change the serial port screen to match your bluefruit device, for example ''/dev/tty.AdafruitEZ-Link3e2f-SPP'' on my system.
+3. Run the example. Press 'h' to store the home position.
 
 processing/FreeIMU_cube/FreeIMU_cube.pde
 
