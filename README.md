@@ -41,6 +41,7 @@ arduino/FreeIMU_quaternion/FreeIMU_quaternion.ino
 # Processing
 
 This is the demo app in Processing included with FreeIMU v0.4.
+
 1. With the headtraker powered on, pair your computer with the bluefruit device.
 2. Change the serial port screen to match your bluefruit device, for example ''/dev/tty.AdafruitEZ-Link3e2f-SPP'' on my system.
 3. Run the example. Press 'h' to store the home position.
