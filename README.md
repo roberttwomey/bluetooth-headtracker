@@ -32,7 +32,7 @@ You can also choose to leave the LiPo charger out of the enclosure for small spa
 
 # Arduino
 
-(arduino/FreeIMU_quaternion/FreeIMU_quaternion.ino)
+[arduino/FreeIMU_quaternion/FreeIMU_quaternion.ino](arduino/FreeIMU_quaternion/FreeIMU_quaternion.ino)
 
 We are using the straight FreeIMU_quaternion example from FreeIMU v0.4. This reads the attached sensors, calculates the AHRS quaternion, and transmits via serial print.
 
