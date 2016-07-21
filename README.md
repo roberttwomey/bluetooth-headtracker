@@ -1,4 +1,4 @@
-# myo-osc-relay
+# bluetooth-headtracker
 
 A simple bluetooth, rechargeable, 10DOF head-tracking device.
 
