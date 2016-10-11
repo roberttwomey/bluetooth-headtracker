@@ -2,7 +2,7 @@
 
 A simple bluetooth, rechargeable, 10DOF head-tracking device.
 
-For use with the [Ambisonic ToolKit (ATK)](http://www.ambisonictoolkit.net/wiki/tiki-index.php) , motion capture, and [Pan-Tilt](http://wiki.roberttwomey.com/Pan-Tilt) camera systems. 
+For use with the [Ambisonic ToolKit (ATK)](http://www.ambisonictoolkit.net/) , motion capture, and [Pan-Tilt](http://wiki.roberttwomey.com/Pan-Tilt) camera systems. 
 
 A hardware, software, and 3d printed enclosure solution.
 
